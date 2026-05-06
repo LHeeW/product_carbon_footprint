@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="p-6 grid grid-cols-[1.5fr_1fr] grid-rows-[auto_1fr] items-start gap-6">
+      <main className="p-6 flex flex-col lg:grid lg:grid-cols-[1.5fr_1fr] lg:grid-rows-[auto_1fr] lg:items-start gap-6">
         <Suspense fallback={<ChartsSkeleton />}>
           <ChartsContainer />
         </Suspense>
