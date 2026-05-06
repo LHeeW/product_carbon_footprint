@@ -26,14 +26,20 @@ yarn start
 - 작성한 코드 github에 커밋 후 pr할때 코드리뷰를 통해 코드의 오류나 문제점 파악할때 사용 (자동) => gemini code assist
 
 ## 시스템 및 설계 내용
+- Next.js(App router), tailwind, tanstack-query, zustand, recharts
+
+- 서버 상태 관리 : tanstack-query
+- 전역 상태 관리 : zustand
+  - form 수정시 open,close 관리
+  - 차트에서 select option으로 회사 선택시 차트, 테이블, 포스트 폼에 공유할 상태값 관리
 
 - 단일 화면내에서 3개의 section으로 구성
-  1. 차트
+  - 차트
     - 월별 탄소 배출량을 막대 그래프 형식의 차트로 시각화
     - select option을 통해 회사별 측정 결과를 반환
-  2. 테이블
+  - 테이블
     - 차트에 나타나는 지표를 세분화하여 테이블로 시각화
-  3. 포스트 폼
+  - 포스트 폼
     - 선택된 회사의 지표에 대해 자유롭게 피드백 할 수 있는 폼 제작
   
 - CRUD
