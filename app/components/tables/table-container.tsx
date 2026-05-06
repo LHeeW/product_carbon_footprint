@@ -8,7 +8,7 @@ export default function TableContainer() {
   const selectedId = useCompanyStore((state) => state.selectedId);
   const { data: selectedCompany } = useCompanyByIdQuery(selectedId);
 
-  if (!selectedCompany || Object.keys(selectedCompany).length === 0) return;
+  if (!selectedCompany || Object.keys(selectedCompany).length === 0) return null;
   return (
     <section className="p-4 rounded-2xl shadow-xl bg-white">
       <h2 className="text-xl font-bold text-green-700 tracking-tighter">

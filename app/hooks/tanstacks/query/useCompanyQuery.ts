@@ -31,7 +31,7 @@ export const useCompanyByIdQuery = <TData = Company>(
     queryFn: fetchCompanies,
     select: (companies) => {
       const selectedId = id || (companies[0]?.id ?? "");
-      if (!selectedId) return [] as unknown as TData;
+      if (!selectedId) return null as unknown as TData;
       const company = companies.find((company) => company.id === selectedId);
       return company;
     },

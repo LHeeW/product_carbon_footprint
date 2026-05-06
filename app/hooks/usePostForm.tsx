@@ -30,7 +30,7 @@ export default function usePostForm(updateData?: Post) {
     const post = {
       title: formData.get("title") as string,
       content: formData.get("content") as string,
-      resourceUid: selectedId || (companies ? companies[0].id : ""),
+      resourceUid: selectedId || companies?.[0].id || "",
       dateTime: new Date().toISOString(),
       ...(updateData?.id && { id: updateData.id }),
     };

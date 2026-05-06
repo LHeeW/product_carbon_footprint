@@ -44,6 +44,7 @@ export default function PostsForm({ updateData }: { updateData?: Post }) {
           </button>
           {updateData && (
             <button
+              type="button"
               onClick={closeForm}
               className="p-4 cursor-pointer text-xl font-bold text-green-700 rounded-2xl hover:shadow-md transition"
             >
