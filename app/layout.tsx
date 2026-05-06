@@ -1,3 +1,4 @@
+import Provider from "./components/provider";
 import "./globals.css";
 
 export default function RootLayout({
@@ -7,7 +8,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-gray-100">
+        <Provider>{children}</Provider>
+      </body>
     </html>
   );
 }
